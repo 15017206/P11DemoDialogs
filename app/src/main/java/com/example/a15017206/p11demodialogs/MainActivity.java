@@ -31,16 +31,14 @@ public class MainActivity extends AppCompatActivity {
                     //  OnClickListener when it is clicked
                     .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
-                            Toast.makeText(MainActivity.this, "You clicked yes",
-                                    Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, "You clicked yes", Toast.LENGTH_SHORT).show();
                         }
                     })
                     // Set text for the negative button and the corresponding
                     //  OnClickListener when it is clicked
                     .setNegativeButton("No", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
-                            Toast.makeText(MainActivity.this, "You clicked no",
-                                    Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, "You clicked no", Toast.LENGTH_SHORT).show();
                         }
                     });
             // Create the AlertDialog object and return it
@@ -48,8 +46,7 @@ public class MainActivity extends AppCompatActivity {
             alertDialog.show();
 
         } else if (item.getItemId() == R.id.itemSimpleList) {
-            String[] list = new String[]{"Monday", "Tuesday", "Wednesday",
-                    "Thursday", "Friday"};
+            String[] list = new String[]{"Monday", "Tuesday", "Wednesday", "Thursday", "Friday"};
 
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setTitle("Which is your freest weekday?")
@@ -60,14 +57,11 @@ public class MainActivity extends AppCompatActivity {
                         // clicked, starting from 0
                         public void onClick(DialogInterface dialog, int which) {
                             if (which == 0) {
-                                Toast.makeText(MainActivity.this, "You said Monday",
-                                        Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivity.this, "You said Monday", Toast.LENGTH_SHORT).show();
                             } else if (which == 4) {
-                                Toast.makeText(MainActivity.this, "You said Friday",
-                                        Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivity.this, "You said Friday", Toast.LENGTH_SHORT).show();
                             } else {
-                                Toast.makeText(MainActivity.this, "You said middle of the week",
-                                        Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivity.this, "You said middle of the week", Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
@@ -75,12 +69,10 @@ public class MainActivity extends AppCompatActivity {
             alertDialog.show();
 
         } else if (item.getItemId() == R.id.itemPassPhrase) {
-            LayoutInflater inflater = (LayoutInflater)
-                    getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             LinearLayout passPhrase =
                     (LinearLayout) inflater.inflate(R.layout.passphrase, null);
-            final EditText etPassphrase = (EditText) passPhrase
-                    .findViewById(R.id.editTextPassPhrase);
+            final EditText etPassphrase = (EditText) passPhrase.findViewById(R.id.editTextPassPhrase);
 
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setTitle("Please Enter")
@@ -88,8 +80,7 @@ public class MainActivity extends AppCompatActivity {
                     .setPositiveButton("Done", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int id) {
-                            Toast.makeText(MainActivity.this, "You had entered " +
-                                    etPassphrase.getText().toString(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, "You had entered " + etPassphrase.getText().toString(), Toast.LENGTH_SHORT).show();
                         }
                     });
             AlertDialog alertDialog = builder.create();
