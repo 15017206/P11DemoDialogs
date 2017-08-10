@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
                     .setNegativeButton("No", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
                             Toast.makeText(MainActivity.this, "You clicked no", Toast.LENGTH_SHORT).show();
+
                         }
                     });
             // Create the AlertDialog object and return it
@@ -70,8 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
         } else if (item.getItemId() == R.id.itemPassPhrase) {
             LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            LinearLayout passPhrase =
-                    (LinearLayout) inflater.inflate(R.layout.passphrase, null);
+            LinearLayout passPhrase = (LinearLayout) inflater.inflate(R.layout.passphrase, null);
             final EditText etPassphrase = (EditText) passPhrase.findViewById(R.id.editTextPassPhrase);
 
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
